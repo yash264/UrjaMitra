@@ -31,6 +31,7 @@ const MapView = () => {
     const [battery, setBattery] = useState(100);
 
     const [routeData, setRouteData] = useState(null); // ✅ NEW
+    const [tripSummary, setTripSummary] = useState(null);
 
     const map = useMapbox(mapContainer, {
         style: mapStyle,
@@ -70,7 +71,9 @@ const MapView = () => {
                 setRange={setRange}
                 battery={battery}
                 setBattery={setBattery}
-                onSubmit={(data) => setRouteData(data)}
+                onSubmit={(data) =>
+                    handleRouting(map.current, { ...data, setTripSummary })
+                }
             />
 
             {/* 🔹 Sidebar (Desktop) */}
@@ -98,6 +101,16 @@ const MapView = () => {
                 ref={mapContainer}
                 style={{ width: "100%", height: "100vh" }}
             />
+
+            {/* Trip Summary Card */}
+            {tripSummary && (
+                <div className="absolute top-1/2 left-5 z-30 p-4 w-64 bg-gradient-to-r from-green-400 to-teal-500 text-white rounded-2xl shadow-2xl font-semibold space-y-2 transform -translate-y-1/2">
+                    <h3 className="text-lg font-bold">🚗 Trip Summary</h3>
+                    <p>📏 Distance: {tripSummary.distance} km</p>
+                    <p>⏱️ Estimated Time: {tripSummary.totalTime} mins</p>
+                    <p>🔋 Battery End: {tripSummary.batteryEnd} %</p>
+                </div>
+            )}
 
             {/* ⚡ EV Stations Button */}
             <EVStations

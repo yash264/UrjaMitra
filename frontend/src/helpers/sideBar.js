@@ -1,8 +1,11 @@
 import { Menu } from "antd";
 import {
-    AppstoreOutlined,
-    BarChartOutlined
-} from "@ant-design/icons";
+    ThunderboltOutlined,
+    ApiOutlined,
+    DashboardOutlined,
+    BarChartOutlined,
+    EnvironmentOutlined
+  } from "@ant-design/icons";
 
 const Sidebar = ({ activeTab, onChange }) => {
     return (
@@ -38,14 +41,29 @@ const Sidebar = ({ activeTab, onChange }) => {
                 onClick={(e) => onChange(e.key)}
                 items={[
                     {
-                        key: "tickets",
-                        icon: <AppstoreOutlined />,
-                        label: "Tickets"
+                        key: "charging",
+                        icon: <ApiOutlined />,
+                        label: "Charging Stations"
                     },
                     {
-                        key: "metrics",
+                        key: "battery",
+                        icon: <ThunderboltOutlined />,
+                        label: "Battery Status"
+                    },
+                    {
+                        key: "range",
+                        icon: <DashboardOutlined />,
+                        label: "Range & Efficiency"
+                    },
+                    {
+                        key: "analytics",
                         icon: <BarChartOutlined />,
-                        label: "Metrics"
+                        label: "EV Analytics"
+                    },
+                    {
+                        key: "trips",
+                        icon: <EnvironmentOutlined />,
+                        label: "Trip Planner"
                     }
                 ]}
                 style={{ flex: 1 }}

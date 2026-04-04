@@ -51,10 +51,10 @@ const Features = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            My <span className="text-yellow-600">Carrer</span>
+                            Jouney of <span className="text-yellow-600">Electric Vechile</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            🎓 Equipped with a strong foundation in Computer Science and Full Stack Development
+                            ⚡ Passionate about Electric Vehicles, sustainable mobility, and building innovative solutions for a greener future
                         </p>
 
                     </motion.div>

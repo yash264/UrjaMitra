@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiMenu, FiX, FiDownload } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const navItems = [
     { name: "About", link: "#header" },
     { name: "Features", link: "#features" },
-    { name: "Projects", link: "#projects" },
     { name: "Contact", link: "#contact" },
 ];
 
@@ -88,22 +88,21 @@ const Navbar = () => {
                     </div>
 
                     {/* DESKTOP RESUME BUTTON */}
-                    <motion.a
-                        // href={myResume}
-                        download
-                        className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full 
-              bg-gradient-to-r from-emerald-500 to-teal-600 
-              text-white font-semibold shadow-lg 
-              hover:shadow-emerald-500/40 transition-all duration-300"
-                        whileHover={{ scale: 1.08 }}
-                        whileTap={{ scale: 0.95 }}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        <FiDownload className="text-md" />
-                        Resume
-                    </motion.a>
+                    <Link to="/mapView">
+                        <motion.div
+                            className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full 
+                            bg-gradient-to-r from-emerald-500 to-teal-600 
+                            text-white font-semibold shadow-lg 
+                            hover:shadow-emerald-500/40 transition-all duration-300"
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.95 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            Get Started
+                        </motion.div>
+                    </Link>
 
                     {/* MOBILE MENU BUTTON */}
                     <motion.button
@@ -144,18 +143,21 @@ const Navbar = () => {
                                 ))}
 
                                 {/* MOBILE RESUME BUTTON */}
-                                <motion.a
-                                    // href={myResume}
-                                    download
-                                    className="flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 
-                    text-white px-4 py-2 rounded-full font-medium justify-center mt-3"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
-                                >
-                                    <FiDownload className="text-md" />
-                                    Download Resume
-                                </motion.a>
+                                <Link to="/mapView">
+                                    <motion.div
+                                        className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full 
+                                        bg-gradient-to-r from-emerald-500 to-teal-600 
+                                        text-white font-semibold shadow-lg 
+                                        hover:shadow-emerald-500/40 transition-all duration-300"
+                                        whileHover={{ scale: 1.08 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.2 }}
+                                    >
+                                        Get Started
+                                    </motion.div>
+                                </Link>
                             </div>
                         </motion.div>
                     )}
