@@ -48,4 +48,4 @@ print(f" Charging Time MAE: {mean_absolute_error(yc_test, yc_pred):.2f}")
 joblib.dump(battery_model, "models/battery_model.pkl")
 joblib.dump(charge_model, "models/charge_model.pkl")
 
-print(" Models trained and saved successfully")
+print(" Server running successfully")
