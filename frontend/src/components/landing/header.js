@@ -1,5 +1,5 @@
-import Introduction from "../helpers/introduction";
-import Meteors from "../helpers/meteors";
+import Introduction from "../../helpers/introduction";
+import Meteors from "../../helpers/meteors";
 
 function Header() {
     return (

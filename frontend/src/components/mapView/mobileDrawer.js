@@ -1,5 +1,5 @@
 import { Drawer } from "antd";
-import Sidebar from "../helpers/sideBar";
+import Sidebar from "../../helpers/sideBar";
 
 const MobileDrawer = ({ open, setOpen, activeTab, setActiveTab }) => {
     return (

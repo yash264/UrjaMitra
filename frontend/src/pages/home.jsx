@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from "../components/navbar";
-import Header from "../components/header";
-import Features from "../components/features";
-import Contact from "../components/contact";
+import Navbar from "../components/landing/navbar";
+import Header from "../components/landing/header";
+import Features from "../components/landing/features";
+import Contact from "../components/landing/contact";
+
 
 function Home() {
   return (

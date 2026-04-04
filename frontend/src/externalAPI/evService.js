@@ -8,7 +8,6 @@ export const fetchEVStations = async (lat, lng) => {
     const url = `${BASE_URL}?output=json&latitude=${lat}&longitude=${lng}&distance=50&distanceunit=KM&maxresults=50&key=${API_KEY}`;
 
     const res = await fetch(url);
-    console.log(res.data);
 
     if (!res.ok) {
       throw new Error("Failed to fetch EV stations");
