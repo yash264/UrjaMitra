@@ -1,8 +1,5 @@
 export const mapStyles = {
     Streets: "mapbox://styles/mapbox/streets-v11",
-    Dark: "mapbox://styles/mapbox/dark-v11",
-    Light: "mapbox://styles/mapbox/light-v11",
-    Satellite: "mapbox://styles/mapbox/satellite-v9",
     "Satellite Streets": "mapbox://styles/mapbox/satellite-streets-v12",
     "Navigation Day": "mapbox://styles/mapbox/navigation-day-v1",
     "Navigation Night": "mapbox://styles/mapbox/navigation-night-v1",
